@@ -1,0 +1,243 @@
+body {
+
+  font-family: 'Noto Sans', sans-serif;
+}
+.totale_bianco {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-top: 30px;
+  z-index: 1;
+}
+
+.contattami{
+  width:400px;
+}
+
+.contenitore_articoli {
+  width:600px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-left:20px;
+  padding-right:20px;
+
+}
+
+.background_blue{
+  background:#c7f1ff;
+}
+.text_blue{
+  color: #08087f;
+}
+
+.background_green{
+  background: #8ffd8f;
+
+}
+.text_green{
+  color: green;
+}
+
+.background_red{
+  background: #ffb7b7;
+
+}
+.text_red{
+  color: rgb(186, 25, 13);
+}
+
+.background_yellow{
+  background: #fcfc80;
+
+}
+.text_yellow{
+  color: #e1ab09;
+}
+
+.titoloArticolo {
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width:100%;
+  background: white;
+}
+/* segue un border stadard per il primo contenitore*/
+.borderRed {
+  border: 1px solid rgb(186, 25, 13);
+}
+
+.articleDate {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: white;
+  font-size: 15px;
+  color: grey;
+}
+
+.indice{
+  margin-top: 20px;
+  width:100%;
+  margin-left: 0;
+  padding-left: 5px;
+  padding-bottom: 7px;
+  color:black;
+  counter-reset: li;
+  background: white;
+  margin-bottom: 0px;
+}
+
+.indice li {
+  display: grid;
+  counter-increment: li;
+  grid-template-columns: 20px 1fr;
+  width:100%;
+  text-align: left;
+  text-shadow: none;
+  color:black;
+  padding-top: 7px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.indice li::before {
+  content: counter(li) ".";
+  text-align: left;
+  font-weight: bold;
+}
+
+.indice a {
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tornaIndice{
+  width:100%;
+  text-align: left;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.para {
+  background: white;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 0px;
+}
+
+.widthText{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 30px;
+  background: white;
+}
+
+@media (min-width:601px) and (max-width:950px) {
+
+  .totale_bianco {
+    flex-wrap: wrap;
+  }
+
+  .contattami {
+    width:100%;
+  }
+
+  .contenitore_articoli {
+    width: 600px;
+  }
+}
+
+
+@media (min-width:0px) and (max-width:600px) {
+
+  .totale_bianco {
+    flex-wrap: wrap;
+  }
+
+  .contattami {
+    width:100%;
+  }
+
+  .contenitore_articoli {
+    width: 100%;
+  }
+
+  .testo1Contattati {
+    margin-top: 50px;
+  }
+
+  .labelCuriosita {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+.labelCuriosita:after {
+   content:" ";
+   background: url(../../svg/frecciaGiu.svg) no-repeat center center;
+  /* aaa nell'after ci vuole per forza una grandezza se imposti il bacground senza content */
+   width:30px;
+   height: 30px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%) scale(1.5);
+   right:10px;
+   /* z-index: 100000; */
+ }
+
+.contentHidden {
+  overflow: hidden;
+  height: 0;
+  overflow-y: auto;
+  background-color: #ffffe6;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.colorContentDettaglio {
+  background-color: #e6ffe6 ;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.colorWhite{
+  color: white;
+}
+
+.colorContentTipContattaci {
+  background-color: rgb(250,90, 80) ;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.hidden.active .contentHidden{
+  /* con questo cliccando su ".hidden" si apre ".contentHidden" l'altezza a cui arriva l'ekemento viene di sueguto specificata */
+  height:auto;
+  transition: 0.5s;
+}
+
+.hidden.active .labelCuriosita:after{
+  content:" ";
+  background: url(../../svg/frecciaSu.svg) no-repeat center center;
+ /* aaa nell'after ci vuole per forza una grandezza se imposti il bacground senza content */
+  width:30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1.5);
+  right:10px;
+  /* z-index: ; */
+  }
+}

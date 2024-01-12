@@ -1,0 +1,277 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+
+.imagineContainer {
+  position: relative;
+  width:100%;
+  height:450px;
+  overflow: hidden;
+  top:0;
+  background: black;
+}
+
+.imaginehome {
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  filter: blur(2px);
+}
+
+.presentazione{
+  /* background-color: rgb(186, 25, 13); */
+  background-color: white;
+  height:550px;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.presentazioneBlur{
+  /* background-image: url("../images/sfondo.webp"); */
+  background-color: black;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat;
+  background-position: center; */
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: blur(2px);
+}
+
+.presentazioneOpacity{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 40%;
+  background: #ebebeb;
+  opacity: 0.6;
+  box-shadow: 5px 5px 10px 2px black;
+
+}
+
+.presentazioneTesto{
+  width: 80%;
+  height: 40%;
+  position: relative;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.presentazioneTesto h2{
+margin-top: 10px;
+color: black;
+}
+
+.presentazioneParagrafo{
+  width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: black;
+  z-index: 3;
+  text-align: center;
+}
+
+.presentazioneParagrafo strong{
+  color: rgb(186, 25, 13);
+}
+
+.presentazioneParagrafo .strongWhite{
+  color: rgb(186, 25, 13);
+}
+
+.presentazione button {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  width: 220px;
+  height: 30px;
+  background-color: rgb(186, 25, 13);
+  border:none;
+  border-radius:20px;
+  font-size: 18px;
+  color: white;
+  z-index: +2;
+  cursor: pointer;
+}
+
+.totale_bianco {
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+/* un indizio??????? */
+.a {
+  display: none;
+}
+
+
+
+.bene {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 50px;
+  width:70px;
+  border-radius: 50%;
+}
+
+.bene1 {
+  margin-top: 300px;
+  margin-left: 50px;
+}
+
+.bene2 {
+  margin-top: 200px;
+  margin-left: 50px;
+}
+
+
+.bene4 {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.scrittaHome{
+  position: absolute;
+  top:50%;
+  right: 13%;
+  transform: scale(0.01);
+  font-size: 34px;
+  font-weight: normal;
+  color: red;
+  text-align:right;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.scrittaHome2{
+  font-size: 60px;
+}
+
+.scrittaHome:hover {
+  color:red;
+}
+
+.goUp {
+transform: scale(2);
+border-radius: 50%;
+position: sticky;
+top:90%;
+left:90%;
+box-shadow: none;
+z-index: 1000;
+border: .5px solid white;
+fill:white;
+}
+
+.innerUp {
+  fill:black;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* solo per contenitore_bianco */
+@media (min-width:0px) and (max-width:699px){
+  .totale_bianco {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+}
+
+
+@media (min-width:425px) and (max-width:480px) {
+
+  .scrittaHome{
+    transform: scale(0.01);
+    font-size: 5.2vw;
+  }
+
+  .scrittaHome2{
+    font-size: 10vw;
+  }
+
+  .goUp {
+  transform: scale(2);
+  left: 89%;
+  top:90%;
+  /* il display è none perchè viene cambiato da JS */
+  }
+}
+
+/* ultimo media a 400 */
+
+@media (min-width:0px) and (max-width:424px)  {
+
+  .scrittaHome{
+    transform: scale(0.01);
+    font-size: 5.2vw;
+  }
+
+  .scrittaHome2{
+    font-size: 10vw;
+  }
+
+  .goUp {
+  transform: scale(2);
+  left: 89%;
+  top:90%;
+  /* il display è none perchè viene cambiato da JS */
+  }
+}
+
+
+/* MEDIA PARTICOLARI: */
+
+
+/* 1) INIZIO MEDIA PER L'IMMAGINE HOME */
+@media (min-width:600px) and (max-width:829px) {
+  .imagineContainer {
+    position: relative;
+    width:100%;
+    height:550px;
+    overflow: hidden;
+    top:0;
+    z-index: -1;
+  }
+}
+
+
+@media (min-width:0px) and (max-width:424px)  {
+
+  .imagineContainer {
+    height: 405px;
+  }
+  .presentazione{
+    height:400px;
+  }
+
+  .presentazione button {
+    right: 50%;
+    transform: translate(50%);
+
+  }
+}
+/* 1) FINE MEDIA PER L'IMMAGINE HOME */
